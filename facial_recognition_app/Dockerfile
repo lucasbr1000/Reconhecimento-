@@ -1,4 +1,4 @@
-FROM python:3.11-slim-buster
+FROM jjanzic/docker-python3-opencv:latest
 
 WORKDIR /app
 
@@ -10,4 +10,3 @@ COPY . .
 EXPOSE 5000
 
 CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:5000"]
-
